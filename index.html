@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Green form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="form">
+    <form>
+        <div>
+            <p class="form-stage-title">
+                Step 1: Your details
+            </p>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Name</span>
+                    <input type="text" name="name" placeholder="First and last name" class="input-field">
+                </label>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Email</span>
+                    <input type="email" name="email" placeholder="example@domain.com" class="input-field">
+                </label>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Phone</span>
+                    <input type="text" name="phone" placeholder="Eg. +4475000000000" class="input-field">
+                </label>
+            </div>
+        </div>
+        <div>
+            <p class="form-stage-title">
+                Step 2: Delivery address
+            </p>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Address</span>
+                    <textarea name="address" class="input-field textarea-height"></textarea>
+                </label>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Post code</span>
+                    <input type="text" name="postCode" class="input-field">
+                </label>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Country</span>
+                    <input type="text" name="country" class="input-field">
+                </label>
+            </div>
+        </div>
+        <div>
+            <p class="form-stage-title">
+                Step 3: Card details
+            </p>
+            <div class="input-container">
+                <span class="input-title">Card type</span>
+                <div class="radio-buttons">
+                    <label>
+                        <input type="radio" name="cardType" value="visa">
+                        <img src="images/visa.png" alt="visa">
+                        <span>VISA</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="cardType" value="amex">
+                        <img src="images/amex.png" alt="amex">
+                        <span>AmEx</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="cardType" value="mastercard">
+                        <img src="images/master.png" alt="mastercard">
+                        <span>Mastercard</span>
+                    </label>
+                </div>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Card number</span>
+                    <input type="text" name="cardNumber" class="input-field">
+                </label>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Security code</span>
+                    <input type="text" name="securityCode" class="input-field">
+                </label>
+            </div>
+            <div class="input-container">
+                <label>
+                    <span class="input-title">Name on card</span>
+                    <input type="text" name="nameOnCard" placeholder="Exact name as on the card" class="input-field">
+                </label>
+            </div>
+        </div>
+        <div class="button-container">
+            <input type="submit" value="buy it!" class="button">
+        </div>
+    </form>
+</section>
+</body>
+</html>
