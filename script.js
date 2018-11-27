@@ -1,1 +1,3 @@
-console.log("Hello World");
+function checkSpaces(str){
+    return str.includes(" ");
+}
