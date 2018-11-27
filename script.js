@@ -1,3 +1,3 @@
-function checkSpaces(str){
-    return str.includes(" ");
+function checkSpaces(st){
+    return st.includes(" ");
 }
