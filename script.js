@@ -6,4 +6,4 @@ function capitalizeString(str) {
     console.log(res);
 }
 
-capitalizeString("hello my name is Booba");
+capitalizeString("hello my name is Gugusha");
