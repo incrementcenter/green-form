@@ -38,6 +38,6 @@ function checkCountries(str) {
             country = true;
         }
     }
-    alert(country);
+    return country;
 }
 checkCountries("Bahrain");
