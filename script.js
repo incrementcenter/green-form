@@ -34,7 +34,7 @@ function checkCountries(str) {
     var country = false;
     var newStr = capitalizeString(str);
     for (let i = 0; i < countries.length; i++) {
-        if (countries[i].name.match(newStr)) {
+        if (countries[i].name === newStr) {
             country = true;
         }
     }
@@ -60,10 +60,10 @@ function validateCountryInput() {
         function changeInputBorder() {
             var data = countryInput.value;
             if (!checkCountries(data)) {
-                countryInput.className = "red-border";
+                countryInput.classList.add("red-border");
             }
             else {
-                countryInput.className = "input-field";
+                countryInput.classList.remove("red-border");
             }
         };
 }

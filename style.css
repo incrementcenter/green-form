@@ -31,14 +31,6 @@
     width: 30%;
 }
 
-.red-border {
-    font-style: italic;
-    width: 50%;
-    padding: 8px;
-    border: 4px solid #FF0000;
-    box-sizing: border-box;
-}
-
 .input-field {
     font-style: italic;
     width: 50%;
@@ -88,9 +80,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-
-
-
+.red-border {
+    box-shadow: 0 0 3px 1px red;
+}
