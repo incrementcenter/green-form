@@ -32,7 +32,7 @@ var countries = [{"name": "Afghanistan", "code": "AF"}, {"name": "land Islands",
 
 function checkCountries(str) {
     var country = false;
-    var newStr = str.replace(str[0], str[0].toUpperCase());
+    var newStr = capitalizeString(str);
     for (let i = 0; i < countries.length; i++) {
         if (countries[i].name.match(newStr)) {
             country = true;
@@ -50,6 +50,7 @@ function capitalizeString(str) {
     });
     return res;
 }
+
 capitalizeString("hello my name is Gugusha");
 
 
@@ -66,4 +67,5 @@ function validateCountryInput() {
             }
         };
 }
+
 validateCountryInput();
