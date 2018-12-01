@@ -40,6 +40,7 @@ function checkCountries(str) {
     }
     return country;
 }
+
 checkCountries("Bahrain");
 
 function capitalizeString(str) {
@@ -47,7 +48,22 @@ function capitalizeString(str) {
     var res = str.replace(/\b\w/g, function (x) {
         return x.toUpperCase()
     });
-    console.log(res);
+    return res;
 }
 capitalizeString("hello my name is Gugusha");
 
+
+function validateCountryInput() {
+    var countryInput = document.querySelector("input[name='country']");
+    countryInput.onchange =
+        function changeInputBorder() {
+            var data = countryInput.value;
+            if (!checkCountries(data)) {
+                countryInput.className = "red-border";
+            }
+            else {
+                countryInput.className = "input-field";
+            }
+        };
+}
+validateCountryInput();
