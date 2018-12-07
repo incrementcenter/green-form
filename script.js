@@ -69,3 +69,15 @@ function validateCountryInput() {
 }
 
 validateCountryInput();
+
+function capitalizeName() {
+    var nameInput = document.querySelector("input[name='name']");
+
+    nameInput.onkeyup = function () {
+
+        var data = nameInput.value;
+        var result = capitalizeString(data);
+        nameInput.value = result;
+    };
+        }
+capitalizeName();
