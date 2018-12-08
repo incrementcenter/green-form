@@ -88,6 +88,7 @@ function emailValidation() {
     var emailInput = document.querySelector("input[name='email']");
     var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     emailInput.onchange = function () {
+        emailInput.classList.remove("red-border", "green-border");
         if (!emailInput.value.match(reg)) {
             emailInput.classList.add("red-border");
         }
