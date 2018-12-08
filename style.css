@@ -83,3 +83,7 @@
 .red-border {
     box-shadow: 0 0 3px 1px red;
 }
+
+.green-border {
+    box-shadow: 0 0 3px 1px #1a7900;
+}
