@@ -97,4 +97,28 @@ function emailValidation() {
         }
     }
 }
+
 emailValidation();
+
+function addSpaces(spaceNum) {
+    var cardNumberInput = document.querySelector("input[name='cardNumber']");
+    cardNumberInput.onkeyup = function () {
+        var data = cardNumberInput.value.replace(/\s*/g, "");
+        if (data.length > 16) {
+            data = data.slice(0, 16);
+        }
+        var arr = data.split("");
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (count === spaceNum) {
+                arr.splice(i, 0, " ");
+                count = 0;
+            } else {
+                count++;
+            }
+        }
+        cardNumberInput.value = arr.join("");
+        console.log(arr);
+    };
+}
+addSpaces(4);
