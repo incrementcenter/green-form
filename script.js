@@ -117,8 +117,36 @@ function addSpaces(spaceNum) {
                 count++;
             }
         }
-        cardNumberInput.value = arr.join("");
-        console.log(arr);
+        return cardNumberInput.value = arr.join("");
+
     };
 }
-addSpaces(4);
+
+addSpaces();
+
+function cardType() {
+
+    var cardInput = document.querySelector("input[name='cardNumber']");
+    var visa = document.querySelector("input[value='visa']");
+    var amex = document.querySelector("input[value='amex']");
+    var mastercard = document.querySelector("input[value='mastercard']");
+
+    cardInput.onkeyup = function () {
+        addSpaces(4);
+        if (cardInput.value == 4) {
+            visa.checked = true;
+        }
+        else if (cardInput.value == 3) {
+            amex.checked = true;
+        }
+        else if (cardInput.value == 5) {
+            mastercard.checked = true;
+        }
+        else {
+          //  cardInput.classList.remove("red-border", "green-border");
+            cardInput.classList.add("red-border");
+        }
+        console.log(cardInput.value);
+    }
+}
+cardType();
