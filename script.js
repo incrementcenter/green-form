@@ -102,30 +102,25 @@ emailValidation();
 
 function addSpaces(spaceNum) {
     var cardNumberInput = document.querySelector("input[name='cardNumber']");
-    cardNumberInput.onkeyup = function () {
-        var data = cardNumberInput.value.replace(/\s*/g, "");
-        if (data.length > 16) {
-            data = data.slice(0, 16);
-        }
-        var arr = data.split("");
-        var count = 0;
-        for (var i = 0; i < arr.length; i++) {
-            if (count === spaceNum) {
-                arr.splice(i, 0, " ");
-                count = 0;
-            } else {
-                count++;
-            }
-        }
-        return cardNumberInput.value = arr.join("");
 
-    };
+    var data = cardNumberInput.value.replace(/\s*/g, "");
+    if (data.length > 16) {
+        data = data.slice(0, 16);
+    }
+    var arr = data.split("");
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (count === spaceNum) {
+            arr.splice(i, 0, " ");
+            count = 0;
+        } else {
+            count++;
+        }
+    }
+    cardNumberInput.value = arr.join("");
 }
 
-addSpaces();
-
 function cardType() {
-
     var cardInput = document.querySelector("input[name='cardNumber']");
     var visa = document.querySelector("input[value='visa']");
     var amex = document.querySelector("input[value='amex']");
@@ -133,20 +128,25 @@ function cardType() {
 
     cardInput.onkeyup = function () {
         addSpaces(4);
-        if (cardInput.value == 4) {
-            visa.checked = true;
+        console.log("keyup", cardInput);
+        cardInput.classList.remove("red-border", "green-border");
+        visa.checked = false;
+        amex.checked = false;
+        mastercard.checked = false;
+        if(cardInput.value != ""){
+            if (cardInput.value[0] == 4) {
+                visa.checked = true;
+            }
+            else if (cardInput.value[0] == 3) {
+                amex.checked = true;
+            }
+            else if (cardInput.value[0] == 5) {
+                mastercard.checked = true;
+            }
+            else {
+                cardInput.classList.add("red-border");
+            }
         }
-        else if (cardInput.value == 3) {
-            amex.checked = true;
-        }
-        else if (cardInput.value == 5) {
-            mastercard.checked = true;
-        }
-        else {
-          //  cardInput.classList.remove("red-border", "green-border");
-            cardInput.classList.add("red-border");
-        }
-        console.log(cardInput.value);
     }
 }
 cardType();
